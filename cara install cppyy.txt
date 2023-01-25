@@ -1,0 +1,57 @@
+https://cppyy.readthedocs.io/en/latest/installation.html#pip-with-conda
+https://github.com/wlav/cppyy
+
+link conda-forge compilers dan cppyy:
+https://anaconda.org/conda-forge/compilers
+https://anaconda.org/conda-forge/cppyy
+
+
+dari web di atas(readthedocs) ==> dengan conda:
+$ conda create -n <nama environment>
+$ conda activate <nama environment>
+(<nama environment>) $ conda install python
+(<nama environment>) $ conda install -c conda-forge compilers
+(<nama environment>) [current compiler] $ python -m pip install cppyy
+
+Penjelasan:
+Gunakan terminal command prompt(cmd),
+saya sudah coba pakai bash dan powershell(untuk run setelah install cppyy) tapi tidak bisa(belum tau alasan kenapa tidak bisa).
+1. buat new environment pada conda (bisa pakai anaconda)
+2. aktifkan new environment tersebut (command: conda activate <nama environment>)
+3. install python (jika pakai anaconda bisa sekaligus install python saat membuat new environment)
+4. install compilers melalui command :
+   conda install -c conda-forge compilers
+5. install cppyy dengan command:
+   python -m pip install cppyy
+   atau
+   pip install cppyy
+
+note:
+untuk cara no.5 bisa dilakukan sebelum cara no.4
+
+done!
+
+untuk test:
+bisa digunakan untuk run python binding c++.
+contoh:
+python binding c++
+- masuk ke Python dgn command:
+  python <enter>
+>>>import cppyy
+>>>
+(oke berhasil)
+
+link contoh:
+https://cppyy.readthedocs.io/en/latest/
+https://github.com/wlav/cppyy/blob/master/doc/tutorial/CppyyTutorial.ipynb
+
+atau buatlah file .py dan file .hpp atau .h
+- run file .py yang memanggil file .hpp dengan command:
+  python <nama file python>.py
+(oke berhasil)
+
+link contoh:
+https://github.com/lefticus/cpp_weekly/issues/220
+https://www.youtube.com/watch?v=TL83P77vZ1k&t=78s
+
+
